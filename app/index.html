@@ -37,13 +37,60 @@
     <main>
       <div class="container">
         <div class="col s12 m8 offset-m4">
-          <p class="flow-text">Send this random quote to a lucky recipient:</p>
-          <blockquote class="flow-text">
-            <p data-hook="quote"></p>
-            <footer><cite data-hook="title"></cite></footer>
-          </blockquote>
-          <button class="btn btn-large waves-effect waves-light grey lighten-2 grey-text text-grey-darken-4" data-hook="new"><i class="mdi-navigation-refresh right"></i>Get a new quote</button>
-          <button class="btn btn-large waves-effect waves-light" data-hook="send"><i class="mdi-content-send right"></i>Send a text!</button>
+          <div class="section">
+            <p class="flow-text">Send this random quote to a lucky recipient:</p>
+            <blockquote class="flow-text" data-hook="quote" style="display:none">
+              <p data-hook="quote-text"></p>
+              <footer><cite data-hook="quote-title"></cite></footer>
+            </blockquote>
+            <div class="center-align" data-hook="spinner" style="display:none">
+              <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+
+                <div class="spinner-layer spinner-red">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+
+                <div class="spinner-layer spinner-yellow">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+
+                <div class="spinner-layer spinner-green">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <button class="btn btn-large waves-effect waves-light grey lighten-2 grey-text text-grey-darken-4" data-hook="new"><i class="mdi-navigation-refresh right"></i>Get a new quote</button>
+            <button class="btn btn-large waves-effect waves-light" data-hook="send"><i class="mdi-content-send right"></i>Send a text!</button>
+          </div>
         </div>
       </div>
     </main>

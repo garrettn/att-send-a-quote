@@ -4,7 +4,9 @@
 
   $(function () {
     var $quote = $('[data-hook~=quote]');
-    var $title = $('[data-hook~=title]');
+    var $quoteText = $('[data-hook~=quote-text]');
+    var $quoteTitle = $('[data-hook~=quote-title]');
+    var $spinner = $('[data-hook~=spinner]');
 
     getNewQuote();
 
@@ -12,11 +14,22 @@
     $('[data-hook~=send]').on('click', sendText);
 
     function getNewQuote () {
+      showSpinner();
       WikiquoteApi.getRandomQuote(quoteTitle, function (quote) {
-        quoteText = quote.quote;
-        $quote.text(quote.quote);
-        $title.text(quote.titles);
+        $quoteText.text(quote.quote);
+        $quoteTitle.text(quote.titles);
+        showQuote();
       });
+    }
+
+    function showQuote () {
+      $spinner.hide();
+      $quote.show();
+    }
+
+    function showSpinner () {
+      $quote.hide();
+      $spinner.show();
     }
 
     function sendText () {
