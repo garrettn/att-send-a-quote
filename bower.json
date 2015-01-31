@@ -2,8 +2,8 @@
   "name": "att",
   "private": true,
   "dependencies": {
-    "bootstrap": "~3.2.0",
     "modernizr": "~2.8.2",
-    "wikiquote-api": "natetyler/wikiquotes-api"
+    "wikiquote-api": "natetyler/wikiquotes-api",
+    "materialize": "~0.95.1"
   }
 }
