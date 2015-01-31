@@ -34,6 +34,7 @@
 
     function sendText () {
       console.log('Sending text: ' + quoteText);
+      // TODO: Add text sending logic here
     }
 
   });
